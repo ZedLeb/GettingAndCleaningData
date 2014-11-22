@@ -1,4 +1,4 @@
-## coursera: Data Science Specialization: Getting and Cleaning Data.
+## Coursera: Data Science Specialization: Getting and Cleaning Data.
 ## Project to demonstrate the ability to collect, work with, and clean a data set.
 ## The goal is to prepare tidy data that can be used for later analysis.
 
@@ -36,13 +36,9 @@
 # read in activity labels
   activity <- read.table(activity, sep = "")
 
-
 # Replace column names with variable names in both training and test data sets (Used the make.names check that occurs during data.frame to ensure removal of duplicate variable names - this also appears to take care of parentheses and hyphens.  The variables are left with a number of periods - which are removed later).
-  
-  
   colnames(test_data) <- features$V2
   data.frame(test_data)-> test_data
-
   colnames(train_data) <- features$V2
   data.frame(train_data)-> train_data
 
@@ -68,13 +64,12 @@
 ## STEP 2: Extract only the measurements on the mean and standard deviation for each measurement. 
   
 # Use dplyr chain to select relevant columns i.e. those containing "mean" and "std" (this was a analysis decision - see code book for explanation)
-  
   library(dplyr)
   
   untidy_2 <- untidy_1 %>%
           select(subject, activity, contains("mean"), contains("std"), -contains("meanFreq"), -contains("gravityMean"), -contains("BodyAccMean"), -contains("angle"))
   
-# This process leaves subject plus activity plus 66 measurement variables.
+# This process leaves only subject plus activity plus 66 measurement variables.
   
 # check for NA values in data frame
   colSums(is.na(untidy_2))
@@ -84,14 +79,12 @@
 ## STEP 3: Use descriptive activity names to name the activities in the data set 
   
 # First need common variable names for joining columns - the numerical activity is labelled activity in untidy_2
-  
   names(activity) <- c("activity", "activityname")
   
 # Use dplyr to join activity table to provide descriptive labels  
   untidy_3 <- left_join(untidy_2, activity)
   
 # Remove unwanted numerical activity column and arrange data frame into tidy wide form.
-  
   untidy_3$activity <- NULL  
   
   tidy <- arrange(untidy_3[, c(1,68,2:67)], subject)
@@ -100,7 +93,6 @@
 ## STEP 4: Appropriately label the data set with descriptive variable names. 
   
 # Remove the periods from the variable names to give clearer variable names.  Camel case style of variable name was retained (this was a analysis decision - see code book for explanation)
-  
   colnames(tidy) <- gsub("\\.", "", colnames(tidy))
   colnames(tidy) <- gsub("mean", "Mean", colnames(tidy))
 

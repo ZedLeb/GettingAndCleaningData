@@ -3,7 +3,7 @@ GettingAndCleaningData
 
 Repository for Getting and Cleaning Data project files.
 
-run_analysis.R is a script which performs an analysis on the following data:
+**run_analysis.R** is a script which performs an analysis on the following data:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 ~ downloaded 13/NOV/2014
@@ -30,12 +30,12 @@ Only the measurements for "mean" and "standard deviation" will be preserved for 
 This provides a data set of 10299 observations and 68 variables (subject, activity and 66 measurements)
 
 The activities are labelled as follows: (in the final analysis they are sorted alphabetically)
-1 WALKING
-2	WALKING_UPSTAIRS
-3	WALKING_DOWNSTAIRS
-4	SITTING
-5	STANDING
-6	LAYING
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
 
 The 66 measurement variable names are preserved from the original raw data in camel case with only hyphens and parentheses removed.
 
@@ -43,5 +43,5 @@ The 66 measurement variable names are preserved from the original raw data in ca
 
 These data are written to a .txt file (HAR.txt) in the ./Samsung/UCI HAR Dataset directory.
 
-A copy of the text file is available here: 
+A copy of the text file is available here:
 https://s3.amazonaws.com/coursera-uploads/user-2be883be8ca9b875d49c8ac0/972587/asst-3/8a3da4a0734911e4b013effee5e9e330.txt

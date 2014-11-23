@@ -39,7 +39,7 @@ The activities are labelled as follows: (in the final analysis they are sorted a
 
 The 66 measurement variable names are preserved from the original raw data in camel case with only hyphens and parentheses removed.
 
-The final analysis presents the MEAN for each of the measurement variables - grouped by subject and activity.
+**The final analysis presents the MEAN for each of the measurement variables - grouped by subject and activity.**
 
 These data are written to a .txt file (HAR.txt) in the ./Samsung/UCI HAR Dataset directory.
 

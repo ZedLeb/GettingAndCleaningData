@@ -29,7 +29,7 @@ fBodyGyroMag
 fBodyGyroJerkMag
 
 A number of variables were estimated from these signals (a full list is available in features.txt in the zipped file).
-For the purposes of the run_analysis.R script the mean and standard deviation value for each signal were preserved: 
+For the purposes of the run_analysis.R script, only the mean and standard deviation values for each signal were preserved: 
 
 The variable names as they appear in the analysed text file are presented below: 66 variables were selected (others were considered as derived variables and were not included)
 

@@ -31,11 +31,17 @@ Only the measurements for "mean" and "standard deviation" will be preserved for 
 This provides a data set of 10299 observations and 68 variables (subject, activity and 66 measurements)
 
 The activities are labelled as follows: (in the final analysis they are sorted alphabetically)
+
 WALKING
+
 WALKING_UPSTAIRS
+
 WALKING_DOWNSTAIRS
+
 SITTING
+
 STANDING
+
 LAYING
 
 The 66 measurement variable names are preserved from the original raw data in camel case with only hyphens and parentheses removed.

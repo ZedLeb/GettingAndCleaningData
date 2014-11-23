@@ -17,17 +17,11 @@ Eight files are read into R:
 
 1. Subjects - training
 2. Activity - training
-
 3. Data - training
-
 4. Subjects - test
-
 5. Activity - test
-
 6. Data - test
-
 7. Activity labels
-
 8. Measurement variable labels
 
 Please refer to codebook for further details of the data.
